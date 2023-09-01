@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuansa Batik</title>
+    <link rel="stylesheet" href="/CSS/Home.css" />
+    <script src="/JS/Home.js"></script>
+  </head>
+  <body>
+    <!-- All Navigation Bar -->
+    <header class="header">
+      <!-- Gambar Logo -->
+      <img src="/Assets/Logo1.svg" alt="" class="logo" />
+      <!-- Navigation Button -->
+      <nav class="navbar">
+        <button>Home</button>
+        <button>Product</button>
+        <button>About Us</button>
+        <button>Contact</button>
+        <button id="show-login">Login</button>
+      </nav>
+    </header>
+    <!-- Login Pop Up Method -->
+    <div class="popup">
+      <div class="close-btn">&times;</div>
+      <div class="form">
+        <h2>Log in</h2>
+        <div class="form-element">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Enter Email" />
+        </div>
+        <div class="form-element">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter Password" />
+        </div>
+        <div class="form-element">
+          <input type="checkbox" id="remember-me" />
+          <label for="remember-me">Remember me</label>
+        </div>
+        <div class="form-element">
+          <button>Sign in</button>
+        </div>
+        <div class="form-element">
+          <a href="/HTML/Signup.html" target="_blank">Create Account ?</a>
+          <p>or</p>
+          <a href="/HTML/Resetpass.html" target="_blank">Forgot Password</a>
+        </div>
+      </div>
+    </div>
+    <!-- Carousel -->
+    <section class="carousel">
+      <div class="image">
+        <img src="/Assets/Gambar.jpg" alt="Carousel" />
+      </div>
+    </section>
+  </body>
+</html>
