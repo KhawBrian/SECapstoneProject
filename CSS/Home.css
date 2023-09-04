@@ -9,8 +9,14 @@
 /* Font Custom */
 @font-face {
     font-family: allfont;
-    src: url(/Assets/Montserrat-Medium.ttf);
+    src: url(/Assets/Montserrat-SemiBold.ttf);
 }
+
+@font-face {
+    font-family: font-desc-foot;
+    src: url(/Assets//Montserrat-Medium.ttf);
+}
+
 
 body{
     height: 100vh;
@@ -168,35 +174,21 @@ body{
 	font-weight: 600;
 }
 
-
 /* Footer */
 .footer {
     line-height: 1.5;
     font-family: fontdescfooter;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.container {
-    min-width: 100%;
-    margin: auto;
-    position: relative;
-    background-color: #f7f6f2;
-}
-
-.content {
+/* .content {
     padding: 10px;
     padding-bottom: 370px;
-}
+} */
 
-h1 {
+/* h1 {
     text-align: center;
     color: #ffffff;
-}
+} */
 
 .row {
     display: flex;
@@ -205,13 +197,8 @@ h1 {
     margin: auto;
 }
 
-ul {
-    list-style: none;
-}
-
 .footer {
-    background-image: linear-gradient(#a36200be, #a36200be);
-    /* padding: 100px 0; */
+    background-color: #a36200be;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -221,6 +208,7 @@ ul {
     width: 115px;
     height: 100px;
     margin-left: 13px;
+	margin-bottom: 13px;
     padding-bottom: 0px;
 }
 .footer-col {
@@ -245,6 +233,7 @@ ul {
 
 .footer-col ul li a {
     font-size: 16px;
+	font-family: font-desc-foot;
     text-transform: capitalize;
     color: #ffffff;
     text-decoration: none;
@@ -255,6 +244,7 @@ ul {
 }
 .footer-col ul p {
     font-size: 16px;
+	font-family: font-desc-foot;
     text-transform: capitalize;
     color: #ffffff;
     text-decoration: none;
@@ -267,15 +257,16 @@ ul {
     padding-left: 8px;
 }
 
-.footer-col .social-links img {
+.footer-col .social-links a {
     display: inline-block;
-    height: 20px;
-    width: 20px;
-    margin: 10px 10px 10px 12px;
+    height: 40px;
+    width: 40px;
+    margin: 0px 10px 10px 0;
+	background-color: rgba(255, 255, 255, 0.2);
     text-align: center;
-    line-height: 30px;
+    line-height: 40px;
     border-radius: 50%;
-    color: red;
+    color: white;
 }
 
 .footer-col.social-links img.active,
@@ -283,6 +274,7 @@ ul {
     background-color: #c2c2c2;
 }
 .footer-bottom hr {
+	
     border: 0;
     height: 1px;
     margin-bottom: 5px;
@@ -291,6 +283,7 @@ ul {
     background-image: rgb(246, 176, 128)
     }
 .footer-bottom p {
+	font-family: font-desc-foot;
     text-align: center;
     color: rgb(255, 255, 255);
     font-size: 15px;
