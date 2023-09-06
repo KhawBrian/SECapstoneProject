@@ -200,7 +200,7 @@ body{
 .footer-col img{
     width: 115px;
     height: 100px;
-    margin-left: 13px;
+    margin-left: 20px;
 	margin-bottom: 13px;
     padding-bottom: 0px;
 }
@@ -378,7 +378,7 @@ body{
 img{
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 @media screen and (max-width:768px){
     .heading h1{
