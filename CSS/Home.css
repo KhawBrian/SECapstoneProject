@@ -311,13 +311,13 @@ body{
         }
 }
 
-*{
+/* *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: fontku;
     src: url(./Assets/RocaOne-Bold.ttf);
-}
+} */
 .hero{
     background-color: #f8f8f8;
     overflow: hidden;
