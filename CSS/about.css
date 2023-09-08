@@ -130,7 +130,6 @@ body {
   font-size: 35px;
   font-family: allfont;
   color: #333;
-  margin-left: 20px;
 }
 .hero-content p {
   font-size: 20px;
@@ -145,7 +144,6 @@ body {
   font-family: "fontku";
   line-height: 1.5;
   margin-bottom: 20px;
-  margin-left: 20px;
   color: #666;
 }
 .hero-content a {
