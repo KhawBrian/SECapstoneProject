@@ -58,7 +58,7 @@ body {
 /* Logo */
 .logo {
     display: inline-block;
-    float: left;
+    /*   float: left; */
     width: 210px;
     height: 70px;
 }
@@ -72,11 +72,38 @@ section {
 .home {
     position: relative;
     width: 100%;
-    min-height: 95vh;
+    height: 700px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     background: #785B35;
+}
+
+.home:before {
+    z-index: 777;
+    content: '';
+    position: absolute;
+    background: rgba(251, 3, 3, 0.034);
+    width: 100%;
+    height: 700px;
+    top: 0;
+    left: 0;
+}
+
+/* elemen dengan kelas "active" yang ada di dalam elemen dengan kelas "home" */
+.home .active {
+    display: block;
+}
+
+/* gambar dalam kelas "home" */
+.home img {
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
 }
 
 /* kelas "content" yang berada di dalam elemen dengan kelas "home" */
@@ -138,21 +165,7 @@ section {
     background-color: #b4813e;
 }
 
-/* elemen dengan kelas "active" yang ada di dalam elemen dengan kelas "home" */
-.home .active {
-    display: block;
-}
 
-/* gambar dalam kelas "home" */
-.home img {
-    z-index: 000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 /* slider-navigation */
 .slider-navigation {
