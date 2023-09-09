@@ -31,12 +31,12 @@ body {
   background-color: white;
   display: flex;
   justify-content: space-between;
-  z-index: 100;
+  z-index: 1000;
   align-items: center;
 }
 
 /* Button Navigation Bar */
-.navbar button {
+.navbar .navbarbutton {
   font-size: 18px;
   background-color: white;
   font-family: "allfont";
@@ -49,8 +49,8 @@ body {
 }
 
 /* Animation Button Navigation Bar */
-.navbar button.active,
-.navbar button:hover {
+.navbar .navbarbutton.active,
+.navbar .navbarbutton:hover {
   font-weight: bolder;
   color: #c7a55b;
 }
