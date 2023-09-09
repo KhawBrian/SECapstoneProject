@@ -32,7 +32,7 @@ body {
     background-color: #f6f4f3;
     display: flex;
     justify-content: space-between;
-    z-index: 100;
+    z-index: 999;
     align-items: center;
 }
 
@@ -108,7 +108,7 @@ section {
 
 /* kelas "content" yang berada di dalam elemen dengan kelas "home" */
 .home content {
-    z-index: 2;
+    z-index: 999;
     color: #fff;
     width: 70%;
     margin-top: 50px;
@@ -120,7 +120,7 @@ section {
     position: absolute;
     top: 50px;
     left: 120px;
-    z-index: 2;
+    z-index: 999;
     color: white;
 
 }
@@ -163,9 +163,8 @@ section {
 /* tautan di dalam elemen dengan kelas "content" saat dihover */
 .home .content a:hover {
     background-color: #b4813e;
+    color: #fff;
 }
-
-
 
 /* slider-navigation */
 .slider-navigation {
@@ -224,6 +223,7 @@ section {
 
 /* Login Pop Up */
 .popup {
+    z-index: 999;
     position: absolute;
     top: -150%;
     left: 50%;
