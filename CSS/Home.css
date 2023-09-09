@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,18 +9,18 @@
 /* Font Custom */
 @font-face {
     font-family: allfont;
-    src: url(/Assets/Montserrat-SemiBold.ttf);
+    src: url(../Assets/Montserrat-SemiBold.ttf);
 }
 
 @font-face {
     font-family: font-desc-foot;
-    src: url(/Assets//Montserrat-Medium.ttf);
+    src: url(../Assets//Montserrat-Medium.ttf);
 }
 
 
-body{
+body {
     height: 100vh;
-    background-color: #f6f4f3;    
+    background-color: #f6f4f3;
     font-family: allfont;
 }
 
@@ -32,146 +32,306 @@ body{
     background-color: #f6f4f3;
     display: flex;
     justify-content: space-between;
-    z-index: 100;
+    z-index: 1000;
     align-items: center;
 }
 
 /* Button Navigation Bar */
-.navbar button{
+.navbar .navbarbutton{
     font-size: 18px;
-    font-family : "allfont"; 
+    font-family: "allfont";
     color: #786337;
     text-decoration: none;
     font-weight: 500;
     margin-left: 25px;
     margin-right: 20px;
-    border: 0;
+    border: none;
+    cursor: pointer;
 }
 
+
 /* Animation Button Navigation Bar */
-.navbar button.active,
-.navbar button:hover{
+.navbar .navbarbutton.active,
+.navbar .navbarbutton:hover {
     font-weight: bolder;
     color: #C7A55B;
+    background-color: none;
 }
+
 /* Logo */
-.logo{
+.logo {
     display: inline-block;
-    float: left;
+    /*   float: left; */
     width: 210px;
     height: 70px;
 }
 
 /* Section Carousel */
-.image img{
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 600px;
+section {
+    padding: 100px 200px;
 }
+
+/* kelas "home" di dalam section */
+.home {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #785B35;
+}
+
+.home:before {
+    z-index: 777;
+    content: '';
+    position: absolute;
+    background: rgba(251, 3, 3, 0.034);
+    width: 100%;
+    height: 700px;
+    top: 0;
+    left: 0;
+}
+
+/* elemen dengan kelas "active" yang ada di dalam elemen dengan kelas "home" */
+.home .active {
+    display: block;
+}
+
+/* gambar dalam kelas "home" */
+.home img {
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+}
+
+/* kelas "content" yang berada di dalam elemen dengan kelas "home" */
+.home content {
+    z-index: 999;
+    color: #fff;
+    width: 70%;
+    margin-top: 50px;
+    display: none;
+}
+
+/* elemen dengan kelas "content" */
+.content {
+    position: absolute;
+    top: 50px;
+    left: 120px;
+    z-index: 999;
+    color: white;
+
+}
+
+/* judul h1  */
+.home .content h1 {
+    font-size: 4em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 60px;
+    margin-bottom: 30px;
+    margin-top: 100px;
+}
+
+/* judul h1 span */
+.home .content h1 span {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 0;
+}
+
+
+/* paragraf */
+.home .content p {
+    margin-bottom: 50px;
+}
+
+/* tautan di dalam elemen dengan kelas "content" */
+.home .content a {
+    background: #785B35;
+    padding: 15px 35px;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+/* tautan di dalam elemen dengan kelas "content" saat dihover */
+.home .content a:hover {
+    background-color: #b4813e;
+    color: #fff;
+}
+
+/* slider-navigation */
+.slider-navigation {
+    z-index: 888;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+}
+
+/* "nav-btn" dalam elemen dengan kelas "slider-navigation" */
+.slider-navigation .nav-btn {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgb(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+    margin: 0 5px;
+}
+
+/* navigation button yang sedang aktif (dalam elemen dengan kelas "slider-navigation") */
+.slider-navigation .nav-btn.active {
+    background: #b4813e;
+}
+
+/* memberikan jarak horizontal antara tombol navigasi, kecuali tombol navigasi terakhir. */
+.slider-navigation .nav-btn:not(:last-child) {
+    margin-right: 5px;
+}
+
+/* navigation button saat dihover */
+.slider-navigation .nav-btn:hover {
+    transform: scale(1.2);
+}
+
+/* gambar carousel */
+.img-slide {
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+
+/* gambar carousel */
+.img-slide.active {
+    clip-path: circle(150% at 0 50%);
+    transition: 2s ease;
+    transition-property: clip-path;
+}
+
 
 /* Login Pop Up */
 .popup {
-	position: absolute;
-	top: -150%;
-	left: 50%;
-	opacity: 0;
-	transform: translate(-50%,-50%) scale(1.25);
-	width: 380px;
-	padding: 20px 30px;
-	background: #fff;
-	box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
-	border-radius: 10px;
-	transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
-			
+    z-index: 1000;
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 380px;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
+
 }
 
 /* Login Pop Up */
-.popup.active{
-	top: 50%;
-	opacity: 1;
-	transform: translate(-50%,-50%) scale(1);
-	transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
+.popup.active {
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
 }
+
 /* Login Pop Up */
 .popup .close-btn {
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	width: 15px;
-	height: 15px;
-	background: #888 ;
-	color: #eee;
-	text-align: center;
-	line-height: 15px;
-	border-radius: 15px;
-	cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
 }
+
 /* Login Pop Up */
 .popup .form h2 {
-	text-align: center;
-	color: #222;
-	margin: 10px 0px 20px;
-	font-size: 25px;
+    text-align: center;
+    color: #222;
+    margin: 10px 0px 20px;
+    font-size: 25px;
 }
+
 /* Login Pop Up */
 .popup .form .form-element {
-	margin: 15px 0px;
+    margin: 15px 0px;
 }
+
 /* Login Pop Up */
 .popup .form .form-element label {
-	font-size: 14px;
-	color: #222;
+    font-size: 14px;
+    color: #222;
 }
 
 /* Login Pop Up */
-.popup .form .form-element input[type="text"],.popup .form .form-element input[type="password"] {
+.popup .form .form-element input[type="text"],
+.popup .form .form-element input[type="password"] {
     font-family: allfont;
-	margin-top: 5px;
-	display: block;
-	width: 100%;
-	padding: 10px;
-	outline: none;
-	border: 1px solid #aaa;
-	border-radius: 5px;
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
 }
 
 /* Login Pop Up */
-.popup .form .form-element input[type="checkbox"]{
-	font-family: allfont;
-	margin-right: 5px;
+.popup .form .form-element input[type="checkbox"] {
+    font-family: allfont;
+    margin-right: 5px;
 }
 
 /* Login Pop Up */
-.popup .form .form-element button{
-	font-family: allfont;
-	width: 100%;
-	height: 40px;
-	border: none;
-	outline: none;
-	font-size: 16px;
-	background: #785B35;
-	color: #f5f5f5;
-	border-radius: 10px;
-	cursor: pointer;
+.popup .form .form-element button {
+    font-family: allfont;
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #785B35;
+    color: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 /* Login Pop Up */
-.popup .form .form-element p{
-	display: inline;
-	font-size: 15px;
-	color: black;
+.popup .form .form-element p {
+    display: inline;
+    font-size: 15px;
+    color: black;
 }
 
 /* Login Pop Up */
 .popup .form .form-element a {
-	display: inline;
-	padding: 0 5px;
-	text-align: right;
-	font-size: 15px;
-	color: #1a79ca;
-	text-decoration: none;
-	font-weight: 600;
+    display: inline;
+    padding: 0 5px;
+    text-align: right;
+    font-size: 15px;
+    color: #1a79ca;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 /* Footer */
@@ -197,11 +357,11 @@ body{
 }
 
 /* Footer */
-.footer-col img{
+.footer-col img {
     width: 115px;
     height: 100px;
-    margin-left: 13px;
-	margin-bottom: 13px;
+    margin-left: 20px;
+    margin-bottom: 13px;
     padding-bottom: 0px;
 }
 
@@ -231,7 +391,7 @@ body{
 /* Footer */
 .footer-col ul li a {
     font-size: 16px;
-	font-family: font-desc-foot;
+    font-family: font-desc-foot;
     text-transform: capitalize;
     color: #ffffff;
     text-decoration: none;
@@ -244,7 +404,7 @@ body{
 /* Footer */
 .footer-col ul p {
     font-size: 16px;
-	font-family: font-desc-foot;
+    font-family: font-desc-foot;
     text-transform: capitalize;
     color: #ffffff;
     text-decoration: none;
@@ -264,7 +424,7 @@ body{
     height: 40px;
     width: 40px;
     margin: 0px 10px 10px 0;
-	background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
@@ -279,7 +439,7 @@ body{
 
 /* Footer */
 .footer-bottom hr {
-	 border: 0;
+    border: 0;
     height: 1px;
     margin-bottom: 5px;
     /* margin-top: ; */
@@ -289,26 +449,168 @@ body{
 
 /* Footer */
 .footer-bottom p {
-	font-family: font-desc-foot;
+    font-family: font-desc-foot;
     text-align: center;
     color: rgb(255, 255, 255);
     font-size: 15px;
     font-family: Lucida Sans Unicode;
     padding: 10px 0px;
     padding-top: 7px;
-    }
+}
 
 /* Footer */
 @media(max-width: 767px) {
     .footer-col {
         width: 50%;
         margin-bottom: 30px;
-            }
-        }
+    }
+}
+
 @media(max-width: 574px) {
     .footer-col {
         width: 100%;
-        }
+    }
 }
 
+/* *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: fontku;
+    src: url(./Assets/RocaOne-Bold.ttf);
+} */
+.hero {
+    background-color: #f8f8f8;
+    overflow: hidden;
+}
 
+.heading h1 {
+    color: #786337;
+    font-size: 55px;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 65px auto;
+}
+
+.hero-content {
+    flex: 1;
+    width: 600px;
+    margin: 0px 25px;
+    animation: fadeInUp 2s ease;
+}
+
+.hero-content h2 {
+    font-size: 35px;
+    font-family: "fontku";
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hero-content p {
+    font-size: 20px;
+    font-family: "fontku";
+    line-height: 1.5;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.hero-content button {
+    display: inline-block;
+    background-color: #cd7416e8;
+    color: #fff;
+    padding: 12px 24;
+    border-radius: 5px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.hero-content button:hover {
+    background-color: #cd7416e8;
+    transform: scale(1.1);
+}
+
+.hero-image {
+    flex: 1;
+    width: 100px;
+    margin: 20px;
+    animation: fadeInRight 2s ease;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    /* border-radius: 10px; */
+}
+
+@media screen and (max-width:768px) {
+    .heading h1 {
+        font-size: 45px;
+        margin-top: 30px;
+    }
+
+    .hero {
+        margin: 0px;
+    }
+
+    .container {
+        width: 100%;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px 40px;
+    }
+
+    .hero-content {
+        width: 100%;
+        margin: 35px 0px;
+    }
+
+    .hero-content h2 {
+        font-size: 30px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .hero-content button {
+        font-size: 16px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translatex(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translatex(0px);
+    }
+
+}
