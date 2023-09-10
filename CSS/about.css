@@ -61,7 +61,20 @@ body {
   width: 210px;
   height: 70px;
 }
+.logo1{
+  display: none;
+}
 
+.header .navbarbutton1{
+  color: #786337;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  /* display: none; */
+  
+}
 .heading h1 {
   margin-top: 100px;
   color: #786337;
@@ -162,7 +175,7 @@ body {
 }
 .hero-image img {
   flex: 1;
-  width: 50%%;
+  width: 100%;
   height: 400px;
   margin: 20px;
   animation: fadeInUp 2s ease;
@@ -170,42 +183,10 @@ body {
 
 .hero2-image img {
   flex: 1;
-  width: 50%%;
+  width: 100%;
   height: 400px;
   margin: 20px;
   animation: fadeInUp 2s ease;
-}
-
-@media screen and (max-width: 768px) {
-  .heading h1 {
-    font-size: 45px;
-    margin-top: 30px;
-  }
-  .hero {
-    margin: 0px;
-  }
-  .container {
-    width: 100%;
-    flex-direction: column;
-    margin: 0px;
-    padding: 0px 40px;
-  }
-  .hero-content {
-    width: 100%;
-    margin: 35px 0px;
-  }
-  .hero-content h2 {
-    font-size: 30px;
-  }
-  .hero-content p {
-    font-size: 18px;
-  }
-  .hero-content button {
-    font-size: 16px;
-  }
-  .hero-image {
-    width: 100%;
-  }
 }
 
 @keyframes fadeInUp {
@@ -229,11 +210,20 @@ body {
   }
 }
 
+/* Other Information About US */
 .container3{
   text-align: center;
   background: #f8f8f8;
 }
 
+/* Other Information About US */
+.container3 h1 {
+  color: #786337;
+  font-size: 40px;
+
+}
+
+/* Other Information About US */
 .hero3-content{
   padding-top: 60px;
   color: #444;
@@ -241,50 +231,59 @@ body {
   margin: auto;
 }
 
+/* Other Information About US */
 .sub-container{
   max-width: 1200px;
   margin: auto;
-  padding: 48px 0;
+  padding: 30px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
+/* Other Information About US */
 .icon{
   margin: 10px;
   padding: 22px;
   max-width: 30%;
-  cursor: pointer;
   transition: 0.4s;
   box-sizing: border-box;
 }
 
-.icon :hover{
-  background-color: #ddd;
-}
-
+/* Other Information About US */
 .icon img{
   width: 150px;
   height: 150px;
 }
 
+/* Other Information About US */
 .icon h2{
   padding: 12px;
+  color: #666;
   font-family: allfont;
   font-weight: bold;
   font-size: 16px;
   text-transform: uppercase;
 }
+
+/* Other Information About US */
 .icon p{
   font-family: "font-desc-foot";
   font-size: 15px;
   color: #666;
 }
 
-.content-working{
-  margin: 20px 0;
-  font-weight: lighter;
-  color: #4e4e4e;
+/* Other Information About US */
+.sub-container :hover{
+  background: #E3BC68;
 }
+
+/* Other Information About US */
+.icon:hover h2, .icon:hover p, .icon:hover img{
+  background: none;
+  color: white;
+}
+
 /* Footer */
 .footer {
   line-height: 1.5;
@@ -311,7 +310,7 @@ body {
 .footer-col img {
   width: 115px;
   height: 100px;
-  margin-left: 20px;
+  margin-left: 15px;
   margin-bottom: 13px;
   padding-bottom: 0px;
 }
@@ -410,15 +409,112 @@ body {
 }
 
 /* Footer */
-@media (max-width: 767px) {
+@media (max-width: 600px) {
   .footer-col {
     width: 50%;
     margin-bottom: 30px;
   }
 }
 
-@media (max-width: 574px) {
+@media (max-width: 600px) {
   .footer-col {
     width: 100%;
+  }
+}
+
+/* Other Information About US */
+@media screen and (max-width: 768px) {
+  .icon{
+    max-width: 100%;
+  }
+  .container3 h1{
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .sub-container{
+    padding-top: 10px;
+  }
+}
+
+/* About US */
+@media screen and (max-width: 768px) {
+  .heading h1 {
+    font-size: 30px;
+    margin-top: 100px;
+  }
+  .hero {
+    margin: 0px;
+  }
+  .container {
+    width: 100%;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px 40px;
+  }
+  .hero-content {
+    width: 100%;
+    margin: 35px 0px;
+  }
+  .hero-content h2 {
+    font-size: 30px;
+  }
+  .hero-content p {
+    font-size: 18px;
+  }
+  .hero-content button {
+    font-size: 16px;
+  }
+  .hero-image img {
+    width: 668px;
+    height: 600px;
+    margin: 0px;
+  }
+  .hero2 {
+    margin: 0px;
+  }
+  .container2 {
+    width: 100%;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px 40px;
+  }
+  .hero2-content {
+    width: 100%;
+    margin-top: 35px;
+  }
+  .hero2-content h2 {
+    font-size: 30px;
+  }
+  .hero2-content p {
+    font-size: 18px;  
+    margin-bottom: 10px;
+  }
+  .hero2-content button {
+    font-size: 16px;
+  }
+  .hero2-image img {
+    width: 668px;
+    height: 600px;
+    margin: 0px;
+  }
+}
+
+/* Navigation Bar */
+@media screen and (max-width: 820px) {
+  .logo1{
+    display: block;
+    width: 70px;
+    height: 60px;
+    margin-left: 20px;
+  }
+  .logo{
+    display: none;
+  }
+  .navbarbutton{
+    display: none;
+  }
+  .header .navbarbutton1{
+    display:block;
+    margin-right: 20px;
   }
 }
