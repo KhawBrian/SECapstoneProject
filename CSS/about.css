@@ -132,16 +132,16 @@ body {
   color: #333;
 }
 .hero-content p {
-  font-size: 20px;
-  font-family: "fontku";
+  font-size: 18px;
+  font-family: "font-desc-foot";
   line-height: 1.5;
   margin-bottom: 20px;
   color: #666;
 }
 
 .hero2-content p {
-  font-size: 20px;
-  font-family: "fontku";
+  font-size: 18px;
+  font-family: "font-desc-foot";
   line-height: 1.5;
   margin-bottom: 20px;
   color: #666;
@@ -156,7 +156,7 @@ body {
   border-radius: 2px;
   transition: 0.3s ease;
 }
-.hero-content button:hover {
+.hero-content a:hover {
   background-color: #cd7416e8;
   transform: scale(1.1);
 }
@@ -229,6 +229,62 @@ body {
   }
 }
 
+.container3{
+  text-align: center;
+  background: #f8f8f8;
+}
+
+.hero3-content{
+  padding-top: 60px;
+  color: #444;
+  font-size: 20px;
+  margin: auto;
+}
+
+.sub-container{
+  max-width: 1200px;
+  margin: auto;
+  padding: 48px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.icon{
+  margin: 10px;
+  padding: 22px;
+  max-width: 30%;
+  cursor: pointer;
+  transition: 0.4s;
+  box-sizing: border-box;
+}
+
+.icon :hover{
+  background-color: #ddd;
+}
+
+.icon img{
+  width: 150px;
+  height: 150px;
+}
+
+.icon h2{
+  padding: 12px;
+  font-family: allfont;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.icon p{
+  font-family: "font-desc-foot";
+  font-size: 15px;
+  color: #666;
+}
+
+.content-working{
+  margin: 20px 0;
+  font-weight: lighter;
+  color: #4e4e4e;
+}
 /* Footer */
 .footer {
   line-height: 1.5;
