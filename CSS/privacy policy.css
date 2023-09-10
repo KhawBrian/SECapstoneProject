@@ -194,7 +194,7 @@ section {
     font-weight: bold;
     background-color: #a36200be;
     color: #eee;
-    font-family: "fontku";
+    font-family: font-desc-foot;
     line-height: 1.5;
     text-align: center;
 }
@@ -204,7 +204,7 @@ section {
     border: 1px solid #dcd7d7bc;
     margin-top: 0;
     font-size: 23px;
-    font-family: "fontku";
+    font-family: font-desc-foot;
     line-height: 1.5;
     background-color: rgba(167, 167, 167, 0.684);
     color: #785B35;
@@ -217,7 +217,7 @@ section {
     border: 1px solid #dcd7d7bc;
     background-color: #dcd7d7ef;
     font-size: 20px;
-    font-family: "fontku";
+    font-family: font-desc-foot;
     line-height: 1.5;
     color: #785B35;
     text-align: justify;
