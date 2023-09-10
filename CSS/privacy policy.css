@@ -222,6 +222,8 @@ section{
 }
 
 .privacy-policy h2 {
+    margin-left: 20px;
+    margin-right: 20px;
     padding: 20px;
     border: 1px solid #dcd7d7bc;
     margin-top: 0px;
@@ -234,7 +236,8 @@ section{
     border-top-right-radius: 8px;
 }
 .privacy-policy p {
-    margin-top: 0;
+    margin-left: 20px;
+    margin-right: 20px;
     margin-bottom: 20px;
     padding: 20px;
     border: 1px solid #dcd7d7bc;
