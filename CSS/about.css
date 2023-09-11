@@ -17,6 +17,11 @@
   src: url(/Assets//Montserrat-Medium.ttf);
 }
 
+@font-face {
+  font-family: font-logo;
+  src: url(/Assets//RocaOne-Bold.ttf);
+}
+
 body {
   height: 100vh;
   background-color: #f6f4f3;
@@ -60,6 +65,7 @@ body {
   display: inline-block;
   width: 210px;
   height: 70px;
+  font-family: font-logo ;
 }
 /* Logo Mobile */
 .logo1{
